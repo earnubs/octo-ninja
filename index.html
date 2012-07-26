@@ -1,0 +1,41 @@
+<!doctype html>
+<title>App Playground</title>
+<link rel=stylesheet href=app.css>
+
+<body>
+
+<div id="file-app">
+  <input type="text" id="new-file" class="file-input" placeholder="stub adding new file">
+
+  <p>sort:
+  <a href="#" class="sort">by name</a>
+  <a href="#" class="sort">by type</a>
+  <a href="#" class="sort">by date</a>
+  </p>
+  <p>filter: 
+  <a href="#" class="filter">file</a>
+  <a href="#" class="filter">photos</a>
+  <a href="#" class="filter">music</a>
+  <a href="#" class="filter">videos</a>
+  </p>
+  <ul id="file-list"></ul>
+</div>
+
+<script type="text/x-template" id="file-item-template">
+  <div class="file-view">
+    <span class="file-type">{type}</span>
+    <span class="file-content" tabindex="0">{name}</span>
+  </div>
+
+  <div class="file-edit">
+    <input type="text" class="file-input" value="{name}">
+  </div>
+
+  <a href="#" class="file-remove" title="Remove this">
+    <span class="file-remove-icon"></span>
+  </a>
+</script>
+
+<script src="http://yui.yahooapis.com/3.5.1/build/yui/yui-min.js"></script>
+<script src=app.js></script>
+</body>

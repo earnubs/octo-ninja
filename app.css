@@ -1,0 +1,68 @@
+.bounding-box { margin:10px;
+    font:normal 14px/1.6 Helvetica, sans-serif;
+}
+
+ul { margin:0 0 5em; padding:0 }
+
+.file-item {
+    list-style:none;
+    margin:0 0 1px 0;
+    padding:10px;
+    box-shadow:0 2px 2px rgba(0,0,0,0.1);
+    border:1px solid rgb(220,220,220);
+    background:white;
+    position:relative;
+}
+
+.file-clear { color: #777; }
+.file-clear { float: right; }
+
+.file-edit,
+.editing .file-view { display: none; }
+
+.editing .file-edit { display: block; }
+
+.file-input {
+    display: block;
+    padding: 6px;
+    width: 420px;
+    position:fixed;
+    bottom:12px;
+    right:0;
+    z-index:100;
+    opacity:0.8;
+}
+
+.file-edit .file-input {
+    position:static;
+}
+
+.file-label {
+    color: #444;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.file-remove {
+    position: absolute;
+    right: 1em;
+    top: 12px;
+}
+
+.file-remove-icon {
+    background: url(trash.svg) 0 0 no-repeat;
+    display: block;
+    height: 17px;
+    opacity: 0.6;
+    visibility: hidden;
+    width: 16px;
+}
+
+.file-remove:hover .file-remove-icon { opacity: 1.0; }
+
+.file-hover .file-remove-icon,
+.file-remove:focus .file-remove-icon { visibility: visible; }
+
+.editing .file-remove-icon { visibility: hidden; }
+
